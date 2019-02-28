@@ -54,13 +54,9 @@ for (var i = 0; i < componentsUFilesNames.length; i++) {
 
 		for (var j = 0; j < componentsU.length; j++) {
 			// MAIN CALCULATE
-			var velocityAngle = angle().getAngleVel(componentsU[j][k], 
-											componentsV[j][k]);
-			var velocityMagnitude = distance().getMagnitude(componentsU[j][k], 
-													componentsV[j][k]);
-			normalComp[j][k] = velocity().getVel(boundaryAngle, 
-											velocityAngle, 
-											velocityMagnitude);
+			var velocityAngle = angle().getAngleVel(componentsU[j][k], componentsV[j][k]);
+			var velocityMagnitude = distance().getMagnitude(componentsU[j][k], componentsV[j][k]);
+			normalComp[j][k] = velocity().getVel(boundaryAngle, velocityAngle, velocityMagnitude);
 		}
 	}
 
